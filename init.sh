@@ -24,7 +24,7 @@ echo -e "\nBegin installation (or abort with ctrl+c)..."
 
 echo "Cloning RKC PC..."
 rm -rf ~/.local/share/rkc-pc
-# git clone  https://github.com/r4t4x3s/rkc-pc.git ~/.local/share/rkc-pc >/dev/null
+git clone https://github.com/r4t4x3s/rkc-pc.git ~/.local/share/rkc-pc >/dev/null
 
 echo "Installation starting..."
-# source ~/.local/share/rks-pc/install.sh
+# source ~/.local/share/rkc-pc/install.sh
