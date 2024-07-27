@@ -8,7 +8,7 @@ set_font() {
 		cd /tmp
 		wget -O "$file_name.zip" "$url"
 		unzip "$file_name.zip" -d "$file_name"
-		cp "$file_name"/*."$file_type" ~/.local/share/fonts
+		mkdir -p ~/.local/share/fonts && cp "$file_name"/*."$file_type" $_
 		rm -rf "$file_name.zip" "$file_name"
 		fc-cache
 		cd -
@@ -17,7 +17,7 @@ set_font() {
 
 	gsettings set org.gnome.desktop.interface monospace-font-name "$font_name 10"
 	cp "~/.local/share/rkc-pc/configs/alacritty/fonts/$file_name.toml" ~/.config/alacritty/font.toml
-	sed -i "s/\"editor.fontFamily\": \".*\"/\"editor.fontFamily\": \"$font_name\"/g" ~/.config/Code/User/settings.json
+	# sed -i "s/\"editor.fontFamily\": \".*\"/\"editor.fontFamily\": \"$font_name\"/g" ~/.config/Code/User/settings.json
 }
 
 if [ "$#" -gt 1 ]; then
