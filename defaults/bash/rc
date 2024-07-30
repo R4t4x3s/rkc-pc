@@ -1,0 +1,4 @@
+source ~/.local/share/rkc-pc/defaults/bash/shell
+source ~/.local/share/rkc-pc/defaults/bash/aliases
+source ~/.local/share/rkc-pc/defaults/bash/prompt
+source ~/.local/share/rkc-pc/defaults/bash/init
