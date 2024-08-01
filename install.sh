@@ -15,7 +15,7 @@ if $RUNNING_GNOME; then
 
 	# echo "Get ready to make a few choices..."
 	source ~/.local/share/rkc-pc/install/terminal/required/app-gum.sh >/dev/null
-	# source ~/.local/share/omakub/first_run_choices.sh
+	source ~/.local/share/rkc-pc/lang-choices.sh
 
 	echo "Installing terminal and desktop tools.."
 else
