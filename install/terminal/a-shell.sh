@@ -6,5 +6,5 @@ cp ~/.local/share/rkc-pc/configs/bashrc ~/.bashrc
 source ~/.local/share/rkc-pc/defaults/bash/shell
 
 [ -f "~/.inputrc" ] && mv ~/.inputrc ~/.inputrc.bak
-# Configure the inputrc using Omakub defaults
+# Configure the inputrc using defaults
 cp ~/.local/share/rkc-pc/configs/inputrc ~/.inputrc
