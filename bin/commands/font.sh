@@ -8,15 +8,16 @@ set_font() {
 		cd /tmp
 		wget -O "$file_name.zip" "$url"
 		unzip "$file_name.zip" -d "$file_name"
-		mkdir -p ~/.local/share/fonts && cp "$file_name"/*."$file_type" $_
+		cp "$file_name"/*."$file_type" ~/.local/share/fonts
 		rm -rf "$file_name.zip" "$file_name"
 		fc-cache
 		cd -
 		clear
+		source $OMAKUB_PATH/ascii.sh
 	fi
 
 	gsettings set org.gnome.desktop.interface monospace-font-name "$font_name 10"
-	cp "$HOME/.local/share/rkc-pc/configs/alacritty/fonts/$file_name.toml" ~/.config/alacritty/font.toml
+	cp "$RKC_PATH/configs/alacritty/fonts/$file_name.toml" ~/.config/alacritty/font.toml
 	# sed -i "s/\"editor.fontFamily\": \".*\"/\"editor.fontFamily\": \"$font_name\"/g" ~/.config/Code/User/settings.json
 }
 
@@ -40,7 +41,10 @@ case $choice in
 	set_font "MesloLGS Nerd Font" "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Meslo.zip" "ttf"
 	;;
 "> Change size")
+	source $RKC_PATH/bin/omakub-sub/font-size.sh
 	exit
 	;;
 esac
+
+source $RKC_PATH/bin/omakub-sub/menu.sh
 
