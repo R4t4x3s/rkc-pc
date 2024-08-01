@@ -6,7 +6,7 @@ Comment=Manage Docker containers with LazyDocker
 Exec=alacritty --config-file /home/$USER/.local/share/rkc-pc/defaults/alacritty/pane.toml --class=Docker --title=Docker -e lazydocker
 Terminal=false
 Type=Application
-Icon=/home/$USER/.local/share/rkc-pc/applications/icons/Docker.png
+Icon=/home/$USER/.local/share/rkc-pc/apps/icons/Docker.png
 Categories=GTK;
 StartupNotify=false
 EOF
