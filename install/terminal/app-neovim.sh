@@ -11,16 +11,6 @@ cd -
 if [ ! -d "$HOME/.config/nvim" ]; then
 	# Use R4t4x3s config
 	git clone https://github.com/R4t4x3s/base.nvim ~/.config/nvim
-
-	# Make everything match the terminal transparency
-	# mkdir -p ~/.config/nvim/plugin/after
-	# cp ~/.local/share/omakub/configs/neovim/transparency.lua ~/.config/nvim/plugin/after/
-	#
-	# # Default to Tokyo Night theme
-	# cp ~/.local/share/omakub/themes/tokyo-night/neovim.lua ~/.config/nvim/lua/plugins/theme.lua
-	#
-	# # Enable default extras
-	# cp ~/.local/share/omakub/configs/neovim/lazyvim.json ~/.config/nvim/lazyvim.json
 fi
 
 #Replace desktop launcher with one running inside Alacritty

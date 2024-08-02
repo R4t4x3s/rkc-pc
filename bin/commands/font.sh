@@ -13,7 +13,7 @@ set_font() {
 		fc-cache
 		cd -
 		clear
-		source $OMAKUB_PATH/ascii.sh
+		source $RKC_PATH/ascii.sh
 	fi
 
 	gsettings set org.gnome.desktop.interface monospace-font-name "$font_name 10"
@@ -41,10 +41,10 @@ case $choice in
 	set_font "MesloLGS Nerd Font" "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Meslo.zip" "ttf"
 	;;
 "> Change size")
-	source $RKC_PATH/bin/omakub-sub/font-size.sh
+	source $RKC_PATH/bin/commands/font-size.sh
 	exit
 	;;
 esac
 
-source $RKC_PATH/bin/omakub-sub/menu.sh
+source $RKC_PATH/bin/commands/menu.sh
 
