@@ -5,8 +5,8 @@ create_pair() {
     ssh-keygen -t $algo -C $comment -f $HOME/.ssh/$file_name
 }
 
-COMMENT=$(gum input --placeholder "email-or-comment")
-FNAME=$(gum input --placeholder "file-name")
+COMMENT=$(gum input --placeholder "email or comment")
+FNAME=$(gum input --placeholder "file name")
 
 [ ! -z "$FNAME" ] || FNAME=rkc_default
 [ ! -z "$COMMENT" ] || COMMENT=rkc_default
