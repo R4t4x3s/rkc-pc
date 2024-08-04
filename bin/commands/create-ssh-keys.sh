@@ -12,3 +12,5 @@ FNAME=$(gum input --placeholder "file-name")
 [ ! -z "$COMMENT" ] || COMMENT=rkc_default
 
 create_pair "ed25519" $COMMENT $FNAME
+
+source $RKC_PATH/bin/commands/menu.sh
