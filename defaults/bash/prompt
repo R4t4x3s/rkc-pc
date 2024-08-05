@@ -27,9 +27,9 @@ WHITE='\[\e[0;37m\]'
 BWHITE='\[\e[1;37m\]'
 BGWHITE='\[\e[1;37m\]'
 
-PROMPT_COMMAND=rami_prompt
+PROMPT_COMMAND=my_prompt
 
-function rami_prompt
+function my_prompt
 {
 if [ "$?" -eq "0" ]
 then
@@ -47,9 +47,11 @@ USERC="${BGBLUE}"
 fi
 #directory path color
 DIRC="${BYELLOW}"
+DIR="$(basename "$PWD")"
+DIR_AND_PARENT="$(basename $(dirname "$PWD"))/$(basename "$PWD")"
 #hostname color
 HOSTNAMEC="${BGMAGENTA}"
 #default color
 DEFAULTC='\[\e[0m\]'
-PS1="${USERC}\u${DEFAULTC}@${HOSTNAMEC}\h ${DIRC}[\w] ${ARROWC}${DEFAULTC} "
+PS1="${USERC}\u${DEFAULTC}@${HOSTNAMEC}\h:${DIRC}${DIR} ${ARROWC}${DEFAULTC} "
 }
