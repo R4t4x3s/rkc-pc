@@ -18,6 +18,7 @@ gext install space-bar@luchrioh
 gext install undecorate@sun.wxg@gmail.com
 gext install Vitals@CoreCoding.com
 gext install AlphabeticalAppGrid@stuarthayhurst
+gext install toggle-alacritty@itstime.tech
 
 # Manually install Pano (until released version is Gnome 46 compatible)
 wget -O /tmp/pano.zip https://github.com/oae/gnome-shell-pano/releases/download/v23-alpha2/pano@elhan.io.zip
@@ -88,3 +89,8 @@ gsettings set org.gnome.shell.extensions.vitals network-speed-format 1
 
 # Configure AlphabeticalAppGrid
 gsettings set org.gnome.shell.extensions.alphabetical-app-grid folder-order-position 'end'
+
+
+# Configure toggle-alacritty@itstime.tech
+gnome-extensions enable toggle-alacritty@itstime.tech
+gsettings --schemadir ~/.local/share/gnome-shell/extensions/toggle-alacritty@itstime.tech/schemas set org.gnome.shell.extensions.toggle-alacritty toggle-key "['<Ctrl>b']"
